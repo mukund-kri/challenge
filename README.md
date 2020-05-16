@@ -13,4 +13,9 @@ directories for challenge days, etc. are painful. This command line
 app automates all those boring tasks, following the philosophy of
 "Automate the boring stuff".
 
+## Installation
+
+```
+pub global activate -sgit https://github.com/mukund-kri/challenge
+```
 
