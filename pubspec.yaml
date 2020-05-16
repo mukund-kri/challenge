@@ -1,8 +1,8 @@
-name: day_code_gen
-description: A sample command-line application.
-# version: 1.0.0
-# homepage: https://www.example.com
-# author: Mukund K <email@example.com>
+name: challenges
+description: A sample command-line to automate 100DaysOfCode challenge tasks
+version: 0.0.1
+homepage: https://github.com/mukund-kri/challenge
+author: Mukund K <mukund.kri@gmail.com>
 
 environment:
   sdk: '>=2.0.0 <3.0.0'
@@ -17,4 +17,7 @@ dev_dependencies:
   test: ^1.0.0
 
 executables:
-  challenges: 
+  challenges:
+
+publish_to: none
+

@@ -1,4 +1,16 @@
-A sample command-line application.
+# Challenge utility
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+
+## Target audience
+This utility is primarally for me. I don't see any one else using this
+package. But if you are here, then feel free to read through the code
+and adapted to your needs.
+
+## Aim
+Participating in the '100 days of Code' for various tech, is fun and
+rewarding. But there are many `Boilerplate` tasks like creating
+directories for challenge days, etc. are painful. This command line
+app automates all those boring tasks, following the philosophy of
+"Automate the boring stuff".
+
+
