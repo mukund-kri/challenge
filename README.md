@@ -19,3 +19,12 @@ app automates all those boring tasks, following the philosophy of
 pub global activate -sgit https://github.com/mukund-kri/challenge
 ```
 
+## Usage
+
+```
+challenge -h 
+```
+
+Should be enough of a guide.
+
+

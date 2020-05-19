@@ -2,9 +2,10 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 
-import './create_command.dart';
-import './starter_command.dart';
-import './exercism_command.dart';
+import 'package:challenges/create_command.dart';
+import 'package:challenges/starter_command.dart';
+import 'package:challenges/exercism_command.dart';
+
 
 void main(List<String> args) {
   CommandRunner('challenges',

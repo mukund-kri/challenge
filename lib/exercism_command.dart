@@ -4,7 +4,7 @@ import 'package:html/parser.dart';
 import 'package:path/path.dart' as p;
 import 'package:args/command_runner.dart';
 
-import 'package:day_code_gen/configuration.dart';
+import 'package:challenges/configuration.dart';
 
 
 class ExercismCommand extends Command {

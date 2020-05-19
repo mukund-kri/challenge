@@ -39,7 +39,7 @@ class CreateCommand extends Command {
 
     var codeDir = p.join(home, challengeRepoDir, date);
     Directory(codeDir).createSync(recursive: true);
-    File(p.join(codeDir, 'README.md')).createSync();
+    File(p.join(codeDir, 'README.org')).createSync();
 
     // if the exercism flag is turned on then create the exercism
     // subdirectory
