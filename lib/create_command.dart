@@ -5,9 +5,11 @@ import 'package:intl/intl.dart';
 import 'package:yaml/yaml.dart';
 import 'package:args/command_runner.dart';
 
+import 'package:challenges/challenge_base_command.dart';
+
 /// Command Class to create the coding challenge day folder based on
 /// today s date
-class CreateCommand extends Command {
+class CreateCommand extends ChallengeBaseCommand {
   final name = 'create';
   final description = "Create the directories for today's coding challenge";
 
@@ -18,9 +20,7 @@ class CreateCommand extends Command {
       ..addFlag('lib',
           abbr: 'd',
           defaultsTo: true,
-          help: 'generate libs-exploration flolder')
-      ..addOption('language',
-          abbr: 'l', help: 'Choose which language challenge to work on');
+          help: 'generate libs-exploration flolder');
   }
 
   void run() {

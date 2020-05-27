@@ -1,55 +1,45 @@
-// import 'dart:io';
-
 import 'package:args/command_runner.dart';
 import 'package:shell/shell.dart';
 
-/// Command to create a starter project using cookiecutter
-class StarterCommand extends Command {
+import 'package:challenges/challenge_base_command.dart';
 
+
+/// Command to create a starter project using cookiecutter
+class StarterCommand extends ChallengeBaseCommand {
   final name = 'starter';
   final description = 'Create a starter project using cookiecutter';
 
   StarterCommand() {
     argParser
-      ..addOption('name',
+      ..addOption(
+        'name',
         abbr: 'n',
         help: 'Name of the project',
         defaultsTo: 'proj',
       )
-      ..addOption('language',
-        abbr: 'l',
-        help: 'Choose which language challenge to work on'
-      )
       ..addOption('template',
-        abbr: 't',
-        help: 'Which template to use',
-        defaultsTo: 'basic'
-      );
+          abbr: 't', help: 'Which template to use', defaultsTo: 'basic');
   }
 
   void run() async {
-
     var template = "${argResults['language']}/${argResults['template']}";
 
-    Map<String,String> ccOptionMap = {
+    Map<String, String> ccOptionMap = {
       'project': argResults['name'],
     };
 
-    var ccOptions = ccOptionMap
-      .entries
-      .map((item) => '${item.key}=${item.value}')
-      .join('');
+    var ccOptions =
+        ccOptionMap.entries.map((item) => '${item.key}=${item.value}').join('');
 
     var shell = Shell();
-    var cc = await shell.start('cookiecutter', 
-      ['--no-input', template, ccOptions]);
+    var cc =
+        await shell.start('cookiecutter', ['--no-input', template, ccOptions]);
 
-    await cc.stdout.readAsString().then((str) => {
-      if (str.length > 0) print(str)
-    });
-    await cc.stderr.readAsString().then((str) => {
-      if (str.length > 0) print('Error: $str')
-    });
-
-   }
+    await cc.stdout
+        .readAsString()
+        .then((str) => {if (str.length > 0) print(str)});
+    await cc.stderr
+        .readAsString()
+        .then((str) => {if (str.length > 0) print('Error: $str')});
+  }
 }
